@@ -1,0 +1,15 @@
+===Solutions===
+
+Level-0 => cat readme
+Level-1 => cat ./-
+           vi -- -
+Level-2 => vi -- --spaces\ in\ this\ filename--
+Level-3 => cat inhere/...Hiding-From-You
+Level-4 => file inhere/-*
+           cd inhere --> file ./-*
+Level-5 => find . -type f -size 1033c
+Level-6 => find / -type f -user bandit7 -group bandit6 -size 33c | grep password
+Level-7 => grep -i millionth data.txt
+Level-8 => sort data.txt | uniq -u
+Level-9 => strings data.txt | grep ===
+Level-10 => base64 -d data.txt
