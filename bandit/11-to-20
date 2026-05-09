@@ -1,3 +1,27 @@
 ===Solutions===
 
 Level-11 => cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+Level-12 => cd $(mktemp -d)
+	    cp ~/data.txt . 
+	    file data.txt
+            xxd -r data.txt > data1
+	    file data1
+	    gzip -cd data1 > data2
+	    file data2
+            bzip2 -cd data2 > data3
+      	    file data3
+	    gzip -cd data3 > data4
+	    file data4
+	    tar -xf data4
+	    ls
+	    file data5.bin
+	    tar -xf data5.bin
+	    ls
+	    file data6.bin
+	    bzip2 -cd data6.bin > data7
+	    file data7
+            tar -xf data7
+	    ls
+            file data8.bin
+	    gzip -cd data8.bin > data9
+	    vi data9 
