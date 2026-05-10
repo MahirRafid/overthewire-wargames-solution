@@ -1,6 +1,7 @@
 ===Solutions===
 
 Level-11 => cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
 Level-12 => cd $(mktemp -d)
 	    cp ~/data.txt . 
 	    file data.txt
@@ -24,4 +25,9 @@ Level-12 => cd $(mktemp -d)
 	    ls
             file data8.bin
 	    gzip -cd data8.bin > data9
-	    vi data9 
+	    vi data9
+
+Level-13 => scp -P 2220 bandit13@bandit.labs.overthewire.org:/home/bandit13/sshkey.private .
+	    ls -l sshkey.private
+	    chmod 400 sshkey.private
+	    ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey.private 
