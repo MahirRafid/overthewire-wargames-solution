@@ -31,3 +31,8 @@ Level-13 => scp -P 2220 bandit13@bandit.labs.overthewire.org:/home/bandit13/sshk
 	    ls -l sshkey.private
 	    chmod 400 sshkey.private
 	    ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey.private 
+
+Level-14 => cat /etc/bandit_pass/bandit14
+	    echo "<< enter the password >>" | nc localhost 30000
+
+Level-15 => openssl s_client -connect localhost:3000 --> enter the password of the current level
