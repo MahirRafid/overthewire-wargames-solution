@@ -35,4 +35,16 @@ Level-13 => scp -P 2220 bandit13@bandit.labs.overthewire.org:/home/bandit13/sshk
 Level-14 => cat /etc/bandit_pass/bandit14
 	    echo "<< enter the password >>" | nc localhost 30000
 
-Level-15 => openssl s_client -connect localhost:3000 --> enter the password of the current level
+Level-15 => openssl s_client -connect localhost:3000 --> enter the password of current level
+
+Level-16 => nmap -sV -p 31000-32000 localhost
+	    openssl s_client -connect localhost:31790 -quiet --> enter the password of the current level
+	    -- cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet
+
+Level-17 => diff --color passwords.old passwords.new
+
+Level-18 => scp -P 2220 bandit18@bandit.labs.overthewire.org:/home/bandit18/readme .
+	    cat readme
+	    -- ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+Level-19 => ./bandit20-do cat /etc/bandit_pass/bandit20
